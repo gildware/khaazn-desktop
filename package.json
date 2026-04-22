@@ -1,0 +1,39 @@
+{
+  "name": "khaanz-desktop-pos",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Electron shell for Khaanz admin POS — silent print and offline order queue",
+  "main": "main.cjs",
+  "khaanz": {
+    "defaultAppUrl": "https://khaanz.in/"
+  },
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --mac --win"
+  },
+  "devDependencies": {
+    "electron": "^34.0.2",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.khaanz.desktop.pos",
+    "productName": "Khaanz POS",
+    "icon": "logo/khaanz-logo.pdf.png",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "main.cjs",
+      "preload.cjs",
+      "package.json",
+      "logo/khaanz-logo.pdf.png"
+    ],
+    "mac": {
+      "category": "public.app-category.business",
+      "target": ["dmg", "zip"]
+    },
+    "win": {
+      "target": ["nsis", "zip"]
+    }
+  }
+}
