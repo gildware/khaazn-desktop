@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "electron .",
-    "dist": "electron-builder --mac --win"
+    "dist": "electron-builder --publish never"
   },
   "devDependencies": {
     "electron": "^34.0.2",
